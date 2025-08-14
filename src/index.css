@@ -1,4 +1,4 @@
-body {
+ body {
   margin: 0;
   font-family: inter, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -12,11 +12,10 @@ code {
     monospace;
 }
 
-
-
-
+/*
 .div-main{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .div-img > img {
@@ -45,4 +44,43 @@ code {
 .div-header{
   display: flex;
   justify-content: space-between;
+} */
+
+body {
+  margin: 0;
+}
+img {
+  width: 300px;
+  height: 320px;
+  border-radius: 3%;
+}
+
+.div-main{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 5%;
+}
+
+.div-location{
+  font-weight:600 ;
+}
+.div-map{
+  color: #918E9B;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 640px){
+  .div-main{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 768px){
+  .div-main{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    gap: 1%;
+  }
 }
